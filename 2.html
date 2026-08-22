@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Александра, у меня есть предложение 💕</title>
+<title>Александра, у меня есть предложение 💙</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
   body {
     min-height: 100vh;
-    background: linear-gradient(135deg, #ffafbd 0%, #ffc3a0 50%, #ff9a9e 100%);
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 50%, #89f7fe 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +20,7 @@
     background: rgba(255, 255, 255, 0.97);
     padding: 35px 30px;
     border-radius: 25px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    box-shadow: 0 20px 60px rgba(2, 136, 209, 0.15);
     text-align: center;
     max-width: 600px;
     width: 100%;
@@ -31,19 +31,19 @@
     0% { transform: scale(0.5); opacity: 0; }
     100% { transform: scale(1); opacity: 1; }
   }
-  h1 { font-size: 2em; color: #d63384; margin-bottom: 10px; }
+  h1 { font-size: 2em; color: #0288d1; margin-bottom: 10px; }
   .name {
-    background: linear-gradient(135deg, #ff6b9d, #d63384);
+    background: linear-gradient(135deg, #0288d1, #03a9f4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: bold;
   }
-  .subtitle { font-size: 1.1em; color: #666; margin-bottom: 25px; }
+  .subtitle { font-size: 1.1em; color: #546e7a; margin-bottom: 25px; }
   .step-label {
     display: inline-block;
-    background: #fff0f5;
-    color: #d63384;
+    background: #e1f5fe;
+    color: #0288d1;
     padding: 5px 14px;
     border-radius: 20px;
     font-size: 0.85em;
@@ -59,25 +59,25 @@
   }
   .day-btn {
     padding: 10px 4px;
-    border: 2px solid #ffd1dc;
+    border: 2px solid #b3e5fc;
     background: white;
     border-radius: 12px;
     cursor: pointer;
     font-size: 0.85em;
     font-weight: 600;
-    color: #888;
+    color: #78909c;
     transition: all 0.3s;
   }
-  .day-btn:hover { transform: translateY(-3px); border-color: #ff6b9d; color: #d63384; }
+  .day-btn:hover { transform: translateY(-3px); border-color: #4facfe; color: #0288d1; }
   .day-btn.active {
-    background: linear-gradient(135deg, #ff6b9d, #d63384);
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
     color: white;
     border-color: transparent;
-    box-shadow: 0 5px 15px rgba(214, 51, 132, 0.4);
+    box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
   }
   
   .day-content {
-    background: linear-gradient(135deg, #fff0f5, #ffe4ec);
+    background: linear-gradient(135deg, #e1f5fe, #b3e5fc);
     padding: 20px;
     border-radius: 18px;
     margin-bottom: 20px;
@@ -88,63 +88,63 @@
     100% { opacity: 1; transform: translateY(0); }
   }
   .day-icon { font-size: 40px; margin-bottom: 8px; }
-  .day-title { font-size: 1.2em; color: #d63384; margin-bottom: 6px; font-weight: bold; }
-  .day-desc { color: #555; line-height: 1.5; font-size: 0.95em; }
+  .day-title { font-size: 1.2em; color: #0288d1; margin-bottom: 6px; font-weight: bold; }
+  .day-desc { color: #546e7a; line-height: 1.5; font-size: 0.95em; }
   
-  .activity-section, .location-section, .walk-section, .fun-section, .dishes-section, .comment-section {
+  .activity-section, .location-section, .restaurant-section, .walk-section, .fun-section, .dishes-section, .comment-section {
     animation: slideIn 0.5s ease-out;
     margin-bottom: 20px;
   }
-  .activity-options, .location-options, .walk-options, .fun-options, .dishes-options {
+  .activity-options, .location-options, .restaurant-options, .walk-options, .fun-options, .dishes-options {
     display: grid;
     gap: 10px;
   }
   .activity-options { grid-template-columns: repeat(3, 1fr); }
-  .location-options, .walk-options { grid-template-columns: repeat(2, 1fr); }
+  .location-options, .walk-options, .restaurant-options { grid-template-columns: repeat(2, 1fr); }
   .fun-options { grid-template-columns: repeat(3, 1fr); }
   .dishes-options { grid-template-columns: repeat(3, 1fr); }
   
-  .activity-card, .location-card, .walk-card, .fun-card, .dish-card {
+  .activity-card, .location-card, .restaurant-card, .walk-card, .fun-card, .dish-card {
     background: white;
-    border: 2px solid #ffd1dc;
+    border: 2px solid #b3e5fc;
     border-radius: 16px;
     padding: 15px 10px;
     cursor: pointer;
     transition: all 0.3s;
     text-align: center;
   }
-  .activity-card:hover, .location-card:hover, .walk-card:hover, .fun-card:hover, .dish-card:hover {
+  .activity-card:hover, .location-card:hover, .restaurant-card:hover, .walk-card:hover, .fun-card:hover, .dish-card:hover {
     transform: translateY(-5px);
-    border-color: #ff6b9d;
-    box-shadow: 0 8px 20px rgba(255, 107, 157, 0.2);
+    border-color: #4facfe;
+    box-shadow: 0 8px 20px rgba(79, 172, 254, 0.2);
   }
-  .activity-card.active, .location-card.active, .walk-card.active, .fun-card.active, .dish-card.active {
-    background: linear-gradient(135deg, #ff6b9d, #d63384);
+  .activity-card.active, .location-card.active, .restaurant-card.active, .walk-card.active, .fun-card.active, .dish-card.active {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
     border-color: transparent;
     color: white;
-    box-shadow: 0 8px 20px rgba(214, 51, 132, 0.4);
+    box-shadow: 0 8px 20px rgba(79, 172, 254, 0.4);
   }
-  .activity-card .a-icon, .location-card .l-icon, .walk-card .w-icon, .fun-card .f-icon, .dish-card .d-icon {
+  .activity-card .a-icon, .location-card .l-icon, .restaurant-card .r-icon, .walk-card .w-icon, .fun-card .f-icon, .dish-card .d-icon {
     font-size: 28px;
     margin-bottom: 6px;
   }
-  .activity-card .a-name, .location-card .l-name, .walk-card .w-name, .fun-card .f-name, .dish-card .d-name {
+  .activity-card .a-name, .location-card .l-name, .restaurant-card .r-name, .walk-card .w-name, .fun-card .f-name, .dish-card .d-name {
     font-size: 0.9em;
     font-weight: 600;
-    color: #555;
+    color: #546e7a;
   }
-  .activity-card.active .a-name, .location-card.active .l-name, .walk-card.active .w-name, .fun-card.active .f-name, .dish-card.active .d-name { color: white; }
+  .activity-card.active .a-name, .location-card.active .l-name, .restaurant-card.active .r-name, .walk-card.active .w-name, .fun-card.active .f-name, .dish-card.active .d-name { color: white; }
   
-  .activity-details, .location-details, .walk-details, .fun-details, .dishes-summary {
-    background: linear-gradient(135deg, #fff0f5, #ffe4ec);
+  .activity-details, .location-details, .restaurant-details, .walk-details, .fun-details, .dishes-summary {
+    background: linear-gradient(135deg, #e1f5fe, #b3e5fc);
     padding: 18px;
     border-radius: 15px;
     margin-top: 15px;
     text-align: left;
     animation: slideIn 0.4s ease-out;
   }
-  .activity-details p, .location-details p, .walk-details p, .fun-details p, .dishes-summary p {
-    color: #555;
+  .activity-details p, .location-details p, .restaurant-details p, .walk-details p, .fun-details p, .dishes-summary p {
+    color: #546e7a;
     line-height: 1.5;
     font-size: 0.95em;
     margin-bottom: 8px;
@@ -155,13 +155,13 @@
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 0.85em;
-    color: #d63384;
+    color: #0288d1;
     font-weight: 600;
   }
   
   .dishes-summary .hint {
     font-size: 0.85em;
-    color: #999;
+    color: #78909c;
     font-style: italic;
     margin-bottom: 10px;
   }
@@ -173,40 +173,58 @@
   }
   .dish-tag {
     background: white;
-    color: #d63384;
+    color: #0288d1;
     padding: 6px 12px;
     border-radius: 20px;
     font-size: 0.9em;
     font-weight: 600;
-    border: 1px solid #ffd1dc;
+    border: 1px solid #b3e5fc;
     animation: slideIn 0.3s ease-out;
   }
   .empty-dishes {
-    color: #999;
+    color: #78909c;
     font-style: italic;
     font-size: 0.9em;
     margin-top: 8px;
   }
   
+  .custom-input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid #b3e5fc;
+    border-radius: 12px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.95em;
+    color: #546e7a;
+    background: white;
+    margin-top: 10px;
+    outline: none;
+    transition: all 0.3s;
+  }
+  .custom-input:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.15);
+  }
+  
   .comment-section {
-    background: linear-gradient(135deg, #fff0f5, #ffe4ec);
+    background: linear-gradient(135deg, #e1f5fe, #b3e5fc);
     padding: 20px;
     border-radius: 18px;
     text-align: left;
-    border: 2px dashed #ffd1dc;
+    border: 2px dashed #b3e5fc;
   }
   .comment-section .comment-label {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #d63384;
+    color: #0288d1;
     font-weight: 600;
     font-size: 1em;
     margin-bottom: 10px;
   }
   .comment-section .comment-hint {
     font-size: 0.85em;
-    color: #888;
+    color: #78909c;
     font-style: italic;
     margin-bottom: 12px;
     line-height: 1.4;
@@ -215,25 +233,25 @@
     width: 100%;
     min-height: 90px;
     padding: 12px 15px;
-    border: 2px solid #ffd1dc;
+    border: 2px solid #b3e5fc;
     border-radius: 14px;
     font-family: 'Segoe UI', sans-serif;
     font-size: 0.95em;
-    color: #555;
+    color: #546e7a;
     background: white;
     resize: vertical;
     transition: all 0.3s;
     outline: none;
   }
   .comment-input:focus {
-    border-color: #ff6b9d;
-    box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.15);
+    border-color: #4facfe;
+    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.15);
   }
-  .comment-input::placeholder { color: #bbb; font-style: italic; }
+  .comment-input::placeholder { color: #b0bec5; font-style: italic; }
   .char-counter {
     text-align: right;
     font-size: 0.8em;
-    color: #aaa;
+    color: #90a4ae;
     margin-top: 6px;
   }
   
@@ -248,11 +266,11 @@
     font-weight: bold;
   }
   .yes {
-    background: linear-gradient(135deg, #ff6b9d, #d63384);
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
     color: white;
-    box-shadow: 0 5px 15px rgba(214, 51, 132, 0.4);
+    box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
   }
-  .yes:hover { transform: scale(1.08); box-shadow: 0 8px 20px rgba(214, 51, 132, 0.6); }
+  .yes:hover { transform: scale(1.08); box-shadow: 0 8px 20px rgba(79, 172, 254, 0.6); }
   .yes:disabled {
     opacity: 0.7;
     cursor: not-allowed;
@@ -260,25 +278,24 @@
   }
   .back {
     background: white;
-    color: #d63384;
-    border: 2px solid #ffd1dc;
+    color: #0288d1;
+    border: 2px solid #b3e5fc;
   }
-  .back:hover { background: #fff0f5; }
+  .back:hover { background: #e1f5fe; }
   .no {
-    background: #eee;
-    color: #888;
+    background: #eceff1;
+    color: #78909c;
     position: relative;
     transition: all 0.2s;
   }
   
-  /* Индикатор отправки */
   .sending-indicator {
     display: none;
     margin-top: 15px;
     padding: 10px 20px;
-    background: #fff0f5;
+    background: #e1f5fe;
     border-radius: 20px;
-    color: #d63384;
+    color: #0288d1;
     font-size: 0.9em;
     font-weight: 600;
     animation: pulse 1.5s infinite;
@@ -314,18 +331,18 @@
     50% { transform: scale(1.2); }
   }
   .chosen-info {
-    background: linear-gradient(135deg, #fff0f5, #ffe4ec);
+    background: linear-gradient(135deg, #e1f5fe, #b3e5fc);
     padding: 20px;
     border-radius: 15px;
     margin: 20px 0;
-    border-left: 4px solid #ff6b9d;
+    border-left: 4px solid #4facfe;
     text-align: left;
   }
-  .chosen-info p { margin: 6px 0; color: #555; }
-  .chosen-info strong { color: #d63384; }
+  .chosen-info p { margin: 6px 0; color: #546e7a; }
+  .chosen-info strong { color: #0288d1; }
   .chosen-info .dish-tag {
     background: white;
-    color: #d63384;
+    color: #0288d1;
     padding: 4px 10px;
     border-radius: 15px;
     font-size: 0.85em;
@@ -338,14 +355,26 @@
     padding: 14px 16px;
     border-radius: 12px;
     margin-top: 12px;
-    border-left: 3px solid #ff6b9d;
+    border-left: 3px solid #4facfe;
     font-style: italic;
-    color: #555;
+    color: #546e7a;
     line-height: 1.5;
   }
   .chosen-info .comment-block::before {
     content: '💬 ';
     font-style: normal;
+  }
+  .paws-message {
+    margin-top: 20px;
+    padding: 15px;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: 15px;
+    color: #0277bd;
+    font-size: 1.05em;
+    font-weight: 600;
+    line-height: 1.5;
+    border: 2px solid #90caf9;
+    animation: pulse 2s infinite;
   }
   .sheet-status {
     margin-top: 15px;
@@ -354,18 +383,12 @@
     font-size: 0.85em;
     font-weight: 600;
   }
-  .sheet-status.success {
-    background: #e8f5e9;
-    color: #2e7d32;
-  }
-  .sheet-status.error {
-    background: #ffebee;
-    color: #c62828;
-  }
+  .sheet-status.success { background: #e8f5e9; color: #2e7d32; }
+  .sheet-status.error { background: #ffebee; color: #c62828; }
   
   @media (max-width: 500px) {
     .days-menu { grid-template-columns: repeat(4, 1fr); }
-    .activity-options, .location-options, .walk-options, .fun-options, .dishes-options { grid-template-columns: repeat(2, 1fr); }
+    .activity-options, .location-options, .restaurant-options, .walk-options, .fun-options, .dishes-options { grid-template-columns: repeat(2, 1fr); }
     h1 { font-size: 1.6em; }
     .card { padding: 25px 18px; }
   }
@@ -374,8 +397,8 @@
 <body>
 
 <div class="card" id="mainCard">
-  <h1>Привет, <span class="name">Александра</span> 💕</h1>
-  <p class="subtitle">Давай спланируем идеальное свидание ✨</p>
+  <h1>Привет, <span class="name">Александра</span> 💙</h1>
+  <p class="subtitle">Давай спланируем наше идеальное свидание ✨</p>
 
   <div class="step-label">Шаг 1 · Выбери день</div>
   <div class="days-menu" id="daysMenu">
@@ -406,6 +429,20 @@
       <div class="location-card" data-loc="restaurant"><div class="l-icon">🍷</div><div class="l-name">В ресторане</div></div>
     </div>
     <div id="locationDetails"></div>
+  </div>
+
+  <div class="restaurant-section" id="restaurantSection" style="display: none;">
+    <div class="step-label">Шаг 3б · Выбери ресторан</div>
+    <div class="restaurant-options" id="restaurantOptions">
+      <div class="restaurant-card" data-rest="byk"><div class="r-icon">🥩</div><div class="r-name">Бык</div></div>
+      <div class="restaurant-card" data-rest="bernice"><div class="r-icon">🍹</div><div class="r-name">Бернис</div></div>
+      <div class="restaurant-card" data-rest="barbados"><div class="r-icon">🏝️</div><div class="r-name">Барбадос</div></div>
+      <div class="restaurant-card" data-rest="berimore"><div class="r-icon">🎩</div><div class="r-name">Бэримор</div></div>
+      <div class="restaurant-card" data-rest="london"><div class="r-icon">🇬🇧</div><div class="r-name">Лондон</div></div>
+      <div class="restaurant-card" data-rest="custom"><div class="r-icon">✏️</div><div class="r-name">Свой вариант</div></div>
+    </div>
+    <div id="restaurantDetails"></div>
+    <input type="text" id="customRestaurantInput" class="custom-input" placeholder="Напиши название места..." style="display: none;" oninput="updateCustomRestaurant()">
   </div>
 
   <div class="walk-section" id="walkSection" style="display: none;">
@@ -453,8 +490,8 @@
 
   <div class="comment-section">
     <div class="comment-label">💬 Оставь пожелание или комментарий</div>
-    <div class="comment-hint">Можешь написать что угодно: аллергии, предпочтения, любимые фильмы, или просто тёплые слова — я всё учту 💕</div>
-    <textarea id="commentInput" class="comment-input" placeholder="Например: не ем лук, хочу безалкогольное вино, или просто «люблю тебя» 💕" maxlength="300" oninput="updateCharCounter()"></textarea>
+    <div class="comment-hint">Можешь написать что угодно: аллергии, предпочтения, или просто тёплые слова — я всё учту 💙</div>
+    <textarea id="commentInput" class="comment-input" placeholder="Например: не ем лук, или просто «люблю тебя» 💙" maxlength="300" oninput="updateCharCounter()"></textarea>
     <div class="char-counter"><span id="charCount">0</span> / 300</div>
   </div>
 
@@ -467,17 +504,21 @@
 </div>
 
 <div class="card success" id="successCard">
-  <div class="big-heart">💖</div>
+  <div class="big-heart">💙</div>
   <h1>Сашенька, ура!</h1>
   <p>Я безумно рад, что ты согласилась 🌹</p>
   <div class="chosen-info" id="chosenInfo"></div>
+  
+  <div class="paws-message">
+    🐾 А после свидания тебе будет предложено пожамкать лапки и посмотреть сериал 📺💙
+  </div>
+  
   <div id="sheetStatus"></div>
-  <p>Обещаю, это будет волшебный вечер ✨</p>
+  <p style="margin-top: 15px;">Обещаю, это будет волшебный вечер ✨</p>
 </div>
 
 <script>
-  // ⚙️ ВСТАВЬ СЮДА URL СВОЕГО GOOGLE APPS SCRIPT (инструкция ниже)
-  const GOOGLE_SCRIPT_URL = 'ВСТАВЬ_СЮДА_URL_ТВОЕГО_СКРИПТА';
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz97D2fm60BbT5cqpqKA1pS4xpUQDtq-jyPKAUQo9MyGeWA2KGpbd4NMWPnwXY9M8pS/exec';
 
   const daysData = {
     mon: { icon: '🌙', title: 'Понедельник', desc: 'Начнём неделю красиво' },
@@ -485,7 +526,7 @@
     wed: { icon: '☕', title: 'Среда', desc: 'Перерыв на самое важное' },
     thu: { icon: '🌟', title: 'Четверг', desc: 'Предвкушение выходных' },
     fri: { icon: '🥂', title: 'Пятница', desc: 'Начало лучших выходных' },
-    sat: { icon: '🌹', title: 'Суббота', desc: 'Целый день только для нас' },
+    sat: { icon: '💙', title: 'Суббота', desc: 'Целый день только для нас' },
     sun: { icon: '🥐', title: 'Воскресенье', desc: 'Нежное начало недели' }
   };
 
@@ -498,6 +539,15 @@
   const locationsData = {
     home: { icon: '🏠', name: 'Дома', desc: 'Приготовлю что-то особенное. Свечи, музыка, уютная атмосфера — только мы вдвоём.', time: '19:30' },
     restaurant: { icon: '🍷', name: 'В ресторане', desc: 'Забронирую столик в уютном месте. Приглушённый свет, вкусная еда и долгие разговоры.', time: '20:00' }
+  };
+
+  const restaurantData = {
+    byk: { icon: '🥩', name: 'Бык', desc: 'Сочные стейки и мясные деликатесы в отличной атмосфере' },
+    bernice: { icon: '🍹', name: 'Бернис', desc: 'Уютная атмосфера, отличная кухня и напитки' },
+    barbados: { icon: '🏝️', name: 'Барбадос', desc: 'Яркие вкусы и расслабленная тропическая атмосфера' },
+    berimore: { icon: '🎩', name: 'Бэримор', desc: 'Элегантный интерьер и изысканная подача блюд' },
+    london: { icon: '🇬🇧', name: 'Лондон', desc: 'Английский стиль, классические блюда и особый шарм' },
+    custom: { icon: '✏️', name: 'Свой вариант', desc: 'Напиши место, о котором ты мечтаешь пойти' }
   };
 
   const walkData = {
@@ -528,6 +578,8 @@
   let currentDay = 'mon';
   let currentActivity = null;
   let currentLocation = null;
+  let currentRestaurant = null;
+  let customRestaurantName = '';
   let currentWalk = null;
   let currentFun = null;
   let currentDishes = [];
@@ -543,11 +595,16 @@
   }
 
   function resetAll() {
-    currentActivity = null; currentLocation = null; currentWalk = null; currentFun = null; currentDishes = [];
-    document.querySelectorAll('.activity-card, .location-card, .walk-card, .fun-card, .dish-card').forEach(c => c.classList.remove('active'));
+    currentActivity = null; currentLocation = null; currentRestaurant = null; customRestaurantName = '';
+    currentWalk = null; currentFun = null; currentDishes = [];
+    document.querySelectorAll('.activity-card, .location-card, .restaurant-card, .walk-card, .fun-card, .dish-card').forEach(c => c.classList.remove('active'));
     document.getElementById('activityDetails').innerHTML = '';
     document.getElementById('locationSection').style.display = 'none';
     document.getElementById('locationDetails').innerHTML = '';
+    document.getElementById('restaurantSection').style.display = 'none';
+    document.getElementById('restaurantDetails').innerHTML = '';
+    document.getElementById('customRestaurantInput').style.display = 'none';
+    document.getElementById('customRestaurantInput').value = '';
     document.getElementById('walkSection').style.display = 'none';
     document.getElementById('walkDetails').innerHTML = '';
     document.getElementById('funSection').style.display = 'none';
@@ -564,14 +621,18 @@
     details.style.animation = 'slideIn 0.4s ease-out';
     details.innerHTML = `<div class="activity-details"><p><strong>${data.icon} ${data.name}:</strong> ${data.desc}</p><span class="time-tag">🕐 ${daysData[currentDay].title} в ${data.time}</span></div>`;
     
-    currentLocation = null; currentWalk = null; currentFun = null; currentDishes = [];
-    document.querySelectorAll('.location-card, .walk-card, .fun-card, .dish-card').forEach(c => c.classList.remove('active'));
+    currentLocation = null; currentRestaurant = null; customRestaurantName = ''; currentWalk = null; currentFun = null; currentDishes = [];
+    document.querySelectorAll('.location-card, .restaurant-card, .walk-card, .fun-card, .dish-card').forEach(c => c.classList.remove('active'));
     document.getElementById('locationDetails').innerHTML = '';
+    document.getElementById('restaurantDetails').innerHTML = '';
+    document.getElementById('customRestaurantInput').style.display = 'none';
+    document.getElementById('customRestaurantInput').value = '';
     document.getElementById('walkDetails').innerHTML = '';
     document.getElementById('funDetails').innerHTML = '';
     renderDishesList();
     
     document.getElementById('locationSection').style.display = (actKey === 'dinner') ? 'block' : 'none';
+    document.getElementById('restaurantSection').style.display = 'none';
     document.getElementById('walkSection').style.display = (actKey === 'walk') ? 'block' : 'none';
     document.getElementById('funSection').style.display = (actKey === 'fun') ? 'block' : 'none';
     document.getElementById('dishesSection').style.display = 'none';
@@ -579,6 +640,7 @@
 
   function renderDetails(type, key, dataObj, containerId) {
     if (type === 'location') currentLocation = key;
+    if (type === 'restaurant') currentRestaurant = key;
     if (type === 'walk') currentWalk = key;
     if (type === 'fun') currentFun = key;
     
@@ -590,12 +652,21 @@
     
     if (type === 'location' && key === 'home') {
       document.getElementById('dishesSection').style.display = 'block';
-    } else if (type === 'location') {
+      document.getElementById('restaurantSection').style.display = 'none';
+    } else if (type === 'location' && key === 'restaurant') {
+      document.getElementById('restaurantSection').style.display = 'block';
       document.getElementById('dishesSection').style.display = 'none';
       currentDishes = [];
       document.querySelectorAll('.dish-card').forEach(c => c.classList.remove('active'));
       renderDishesList();
+    } else if (type === 'location') {
+      document.getElementById('restaurantSection').style.display = 'none';
+      document.getElementById('dishesSection').style.display = 'none';
     }
+  }
+
+  function updateCustomRestaurant() {
+    customRestaurantName = document.getElementById('customRestaurantInput').value.trim();
   }
 
   function toggleDish(dishKey) {
@@ -637,6 +708,21 @@
     card.classList.add('active'); renderDetails('location', card.dataset.loc, locationsData, 'locationDetails');
   }));
 
+  document.querySelectorAll('.restaurant-card').forEach(card => card.addEventListener('click', () => {
+    document.querySelectorAll('.restaurant-card').forEach(c => c.classList.remove('active'));
+    card.classList.add('active'); renderDetails('restaurant', card.dataset.rest, restaurantData, 'restaurantDetails');
+    
+    const customInput = document.getElementById('customRestaurantInput');
+    if (card.dataset.rest === 'custom') {
+      customInput.style.display = 'block';
+      customInput.focus();
+    } else {
+      customInput.style.display = 'none';
+      customRestaurantName = '';
+      customInput.value = '';
+    }
+  }));
+
   document.querySelectorAll('.walk-card').forEach(card => card.addEventListener('click', () => {
     document.querySelectorAll('.walk-card').forEach(c => c.classList.remove('active'));
     card.classList.add('active'); renderDetails('walk', card.dataset.walk, walkData, 'walkDetails');
@@ -657,6 +743,12 @@
       currentDishes = [];
       document.querySelectorAll('.dish-card').forEach(c => c.classList.remove('active'));
       renderDishesList();
+    } else if (currentRestaurant) {
+      currentRestaurant = null; customRestaurantName = '';
+      document.querySelectorAll('.restaurant-card').forEach(c => c.classList.remove('active'));
+      document.getElementById('restaurantDetails').innerHTML = '';
+      document.getElementById('customRestaurantInput').style.display = 'none';
+      document.getElementById('customRestaurantInput').value = '';
     } else if (currentFun) {
       currentFun = null;
       document.querySelectorAll('.fun-card').forEach(c => c.classList.remove('active'));
@@ -665,6 +757,7 @@
       currentLocation = null;
       document.querySelectorAll('.location-card').forEach(c => c.classList.remove('active'));
       document.getElementById('locationDetails').innerHTML = '';
+      document.getElementById('restaurantSection').style.display = 'none';
       document.getElementById('dishesSection').style.display = 'none';
     } else if (currentWalk) {
       currentWalk = null;
@@ -675,6 +768,7 @@
       document.querySelectorAll('.activity-card').forEach(c => c.classList.remove('active'));
       document.getElementById('activityDetails').innerHTML = '';
       document.getElementById('locationSection').style.display = 'none';
+      document.getElementById('restaurantSection').style.display = 'none';
       document.getElementById('walkSection').style.display = 'none';
       document.getElementById('funSection').style.display = 'none';
       document.getElementById('dishesSection').style.display = 'none';
@@ -683,7 +777,7 @@
 
   renderDay('mon');
 
-  const hearts = ['💖', '💕', '💗', '💓', '❤️', '🌸'];
+  const hearts = ['💙', '🩵', '🫧', '💎', '🐾', '🌊'];
   function createHeart() {
     const heart = document.createElement('div');
     heart.className = 'heart';
@@ -712,22 +806,16 @@
     return div.innerHTML;
   }
 
-  // 📊 ОТПРАВКА В GOOGLE ТАБЛИЦУ
   async function sendToGoogleSheets(data) {
-    if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbz97D2fm60BbT5cqpqKA1pS4xpUQDtq-jyPKAUQo9MyGeWA2KGpbd4NMWPnwXY9M8pS/exec') {
+    if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL.includes('ВСТАВЬ_СЮДА')) {
       console.warn('Google Script URL не настроен');
       return { success: false, error: 'URL не настроен' };
     }
-
     try {
-      // Используем no-cors, чтобы обойти проблемы с CORS
-      // Apps Script всё равно получит данные и запишет их
       await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
-        headers: {
-          'Content-Type': 'text/plain;charset=utf-8',
-        },
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify(data)
       });
       return { success: true };
@@ -745,6 +833,14 @@
     if (currentActivity === 'dinner' && !currentLocation) {
       alert('Выбери, где поужинаем 😉');
       document.getElementById('locationSection').scrollIntoView({ behavior: 'smooth' }); return;
+    }
+    if (currentActivity === 'dinner' && currentLocation === 'restaurant' && !currentRestaurant) {
+      alert('Выбери ресторан 😉');
+      document.getElementById('restaurantSection').scrollIntoView({ behavior: 'smooth' }); return;
+    }
+    if (currentActivity === 'dinner' && currentLocation === 'restaurant' && currentRestaurant === 'custom' && !customRestaurantName) {
+      alert('Напиши название своего варианта ресторана 😉');
+      document.getElementById('customRestaurantInput').focus(); return;
     }
     if (currentActivity === 'dinner' && currentLocation === 'home' && currentDishes.length === 0) {
       alert('Выбери хотя бы одно блюдо 😉');
@@ -764,7 +860,6 @@
     let finalDesc = act.desc, finalTime = act.time, finalName = act.name;
     let dishesHtml = '';
     
-    // Формируем данные для таблицы
     const sheetData = {
       timestamp: new Date().toLocaleString('ru-RU'),
       name: 'Александра',
@@ -774,6 +869,8 @@
       activity_name: act.name,
       location_key: '',
       location_name: '',
+      restaurant_key: '',
+      restaurant_name: '',
       walk_key: '',
       walk_name: '',
       fun_key: '',
@@ -787,6 +884,14 @@
       finalDesc = d.desc; finalTime = d.time; finalName = `${act.name} ${d.name.toLowerCase()}`;
       sheetData.location_key = currentLocation;
       sheetData.location_name = d.name;
+      
+      if (currentLocation === 'restaurant' && currentRestaurant) {
+        const r = restaurantData[currentRestaurant];
+        const restName = currentRestaurant === 'custom' ? customRestaurantName : r.name;
+        finalName = `${act.name} в ресторане "${restName}"`;
+        sheetData.restaurant_key = currentRestaurant;
+        sheetData.restaurant_name = restName;
+      }
       
       if (currentLocation === 'home' && currentDishes.length > 0) {
         dishesHtml = '<p style="margin-top:12px;"><strong>🍽️ Меню:</strong></p><div>' +
@@ -812,20 +917,16 @@
       commentHtml = `<div class="comment-block">${escapeHtml(comment)}</div>`;
     }
     
-    // Показываем индикатор отправки
     const yesBtn = document.getElementById('yesBtn');
     const indicator = document.getElementById('sendingIndicator');
     yesBtn.disabled = true;
     indicator.classList.add('active');
     
-    // Отправляем в Google Таблицу
     const sheetResult = await sendToGoogleSheets(sheetData);
     
-    // Скрываем индикатор
     indicator.classList.remove('active');
     yesBtn.disabled = false;
     
-    // Показываем экран успеха (в любом случае — не ломаем романтику!)
     document.getElementById('mainCard').style.display = 'none';
     document.getElementById('successCard').style.display = 'block';
     document.getElementById('chosenInfo').innerHTML = `
@@ -837,12 +938,11 @@
       ${commentHtml}
     `;
     
-    // Показываем статус отправки
     const statusDiv = document.getElementById('sheetStatus');
     if (sheetResult.success) {
-      statusDiv.innerHTML = '<div class="sheet-status success">✅ Твой выбор сохранён 💕</div>';
+      statusDiv.innerHTML = '<div class="sheet-status success">✅ Твой выбор сохранён и отправлен мне 💙</div>';
     } else {
-      statusDiv.innerHTML = '<div class="sheet-status error">⚠️ Не удалось сохранить, но я всё запомню 💕</div>';
+      statusDiv.innerHTML = '<div class="sheet-status error">⚠️ Не удалось сохранить, но я всё равно всё запомню 💙</div>';
     }
     
     for (let i = 0; i < 60; i++) setTimeout(createHeart, i * 40);
